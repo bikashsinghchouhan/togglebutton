@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <link href="toggleCss.css" rel="stylesheet">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Toggle Button</h1>
+        <div id="box"></div>
+        <button id="toggleButton">Show Box</button>
+    </div>
+
+    <div class="container2">
+        <h1>Code Snippet</h1>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>index.html</span>
+                <button class="copy-btn" onclick="copyCode('code-block-html', this)">Copy</button>
+            </div>
+            <pre id="code-block-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Toggle Button&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Toggle Button&lt;/h1&gt;
+        &lt;div id="box"&gt;&lt;/div&gt;
+        &lt;button id="toggleButton"&gt;Show Box&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </div>
+
+        <div class="code-container">
+            <div class="code-header">
+                <span>style.css</span>
+                <button class="copy-btn" onclick="copyCode('code-block-css', this)">Copy</button>
+            </div>
+            <pre id="code-block-css">
+                
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+     margin: 20px;}
+ 
+ .container {
+     width: 100%;
+     height: 70vh;
+     background-color: blue;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding: 20px;}
+ 
+ h1 {
+     margin-bottom: 20px;
+     color: white;}
+ 
+ #box {
+     width: 300px;
+     height: 300px;
+     margin: 20px;
+     display: none;
+     background-color: rgb(233, 98, 98);
+     border-radius: 20px;
+     transition: opacity 0.8s ease-in-out;}
+ 
+           button {
+     padding: 10px 20px;
+     border-radius: 5px;
+     background-color: bisque;
+     cursor: pointer;
+     border: none;
+     font-size: 16px;
+ }</pre>
+        </div>
+
+        <div class="code-container">
+            <div class="code-header">
+                <span>script.js</span>
+                <button class="copy-btn" onclick="copyCode('code-block-js', this)">Copy</button>
+            </div>
+            <pre id="code-block-js">document.getElementById("toggleButton").addEventListener("click", function() {
+    let box = document.getElementById("box");
+    if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+        this.textContent = "Hide box";
+    } else {
+        box.style.display = "none";
+        this.textContent = "Show Box";
+    }
+});</pre>
+        </div>
+    </div>
+
+   
+</body>
+
+
+<script src="toggleScript.js"></script>
+</html>
